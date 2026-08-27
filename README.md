@@ -61,6 +61,17 @@ Or using the project virtual environment:
 python -m streamlit run app.py --server.address 0.0.0.0 --server.port 8501
 ```
 
+## Deploy on Streamlit Cloud
+
+GitHub stores the project files but does not run Streamlit. To create a public web app:
+
+1. Open [Streamlit Community Cloud](https://share.streamlit.io/).
+2. Sign in with GitHub and select `Mohamedimran06/NHL-Analytics`.
+3. Set the main file to `app.py`.
+4. Deploy the app.
+
+The deployed app also needs a MySQL database accessible over the internet. `localhost` refers to the computer running the app, so the current local MySQL database will not be available to Streamlit Cloud without a hosted database and configured secrets.
+
 ## Database Setup
 
 The app expects a MySQL database named `nhl` with the following main tables:
