@@ -37,6 +37,7 @@ NHL/
 - `notebooks/` – data collection and database-loading notebooks
 - `data/` – exported JSON data files
 - `assets/` – application images and branding
+- `.streamlit/secrets.toml.example` – template for local and cloud database settings
 
 ## Requirements
 
@@ -95,6 +96,8 @@ pymysql.connect(
     database="nhl",
 )
 ```
+
+For Streamlit Cloud, add the database values in **Manage app → Settings → Secrets** using the format in `.streamlit/secrets.toml.example`. The MySQL server must be hosted and allow connections from Streamlit Cloud; a database running on `localhost` is not reachable by the deployed app.
 
 ## Notes
 
